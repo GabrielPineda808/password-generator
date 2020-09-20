@@ -19,6 +19,11 @@ function generatePassword(){
       
       if(lower == true && upper == true && numeric == true && special == true){
         var characters = "abcdefghijklmnopqrstuvwxyz234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-+<>"
+        for (var x = 0; x < passwordLength; x++) {
+          var i = Math.floor(Math.random() * characters.length);
+          password += characters.charAt(i);
+        }
+       
       }
     }
   })
