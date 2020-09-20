@@ -69,19 +69,19 @@ function generatePassword(){
         forpass();
       }
       else if(lower == true && upper == false && numeric == false && special == false){
-        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        var characters = "abcdefghijklmnopqrstuvwxyz"
         forpass();
       }
       else if(lower == false && upper == true && numeric == false && special == false){
-        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         forpass();
       }
       else if(lower == false && upper == false && numeric == true && special == false){
-        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        var characters = "1234567890"
         forpass();
       }
       else if(lower == false && upper == false && numeric == false && special == true){
-        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        var characters = "!@#$%^&*()-+<>"
         forpass();
       }
       else{
@@ -94,7 +94,6 @@ function generatePassword(){
 // Write password to the #password input
 function writePassword() {
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
