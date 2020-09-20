@@ -13,7 +13,12 @@ In this project I was able to use javascript in order ot create a function that 
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Code Snippet
-    
+    Using the confirm tag i was able to save the users choice when asked what chracters they would like in their password saved inside variable as true or false
+
+    var lower = confirm("Would you like lowercase characters in your password?");
+    var upper = confirm("Would you like uppercase characters in your password?");
+    var numeric = confirm("Would you like numeric characters in your password?");
+    var special = confirm("Would you like special characters in your password?");
 
 
 ## Authors
