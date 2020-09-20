@@ -1,10 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var password = "";
 
 function generatePassword(){
   generateBtn.addEventListener("click", function(){
     var passwordLength = prompt("How many characters would you like your password to be? (8-128 characters");
-    var password = "";
+    
     if (passwordLength < 8){
       alert("Password can be no less than 8 characters.")
     }
@@ -25,10 +26,69 @@ function generatePassword(){
       }
 
       if(lower == true && upper == true && numeric == true && special == true){
-        var characters = "abcdefghijklmnopqrstuvwxyz234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-+<>"
+        var characters = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-+<>"
         forpass();
       }
-      alert(password)
+      else if(lower == false && upper == true && numeric == true && special == true){
+        var characters = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-+<>"
+        forpass();
+      }
+      else if(lower == true && upper == false && numeric == true && special == true){
+        var characters = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-+<>"
+        forpass();
+      }
+      else if(lower == true && upper == true && numeric == false && special == true){
+        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-+<>"
+        forpass();
+      }
+      else if(lower == true && upper == true && numeric == true && special == false){
+        var characters = "abcdefghijklmnopqrstuvwxyz234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        forpass();
+      }
+      else if(lower == false && upper == false && numeric == true && special == true){
+        var characters = "1234567890!@#$%^&*()-+<>"
+        forpass();
+      }
+      else if(lower == false && upper == true && numeric == false && special == true){
+        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-+<>"
+        forpass();
+      }
+      else if(lower == false && upper == true && numeric == true && special == false){
+        var characters = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        forpass();
+      }
+      else if(lower == true && upper == false && numeric == false && special == true){
+        var characters = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>"
+        forpass();
+      }
+      else if(lower == true && upper == false && numeric == true && special == false){
+        var characters = "abcdefghijklmnopqrstuvwxyz1234567890"
+        forpass();
+      }
+      else if(lower == true && upper == true && numeric == false && special == false){
+        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        forpass();
+      }
+      else if(lower == true && upper == false && numeric == false && special == false){
+        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        forpass();
+      }
+      else if(lower == false && upper == true && numeric == false && special == false){
+        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        forpass();
+      }
+      else if(lower == false && upper == false && numeric == true && special == false){
+        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        forpass();
+      }
+      else if(lower == false && upper == false && numeric == false && special == true){
+        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        forpass();
+      }
+      else{
+        alert("You must at minimum choose one character attribute");
+      }
+      return password;
     }
   })
 }
