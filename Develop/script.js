@@ -17,7 +17,9 @@ function generatePassword(){
       var numeric = confirm("Would you like numeric characters in your password?");
       var special = confirm("Would you like special characters in your password?");
       
-      
+      if(lower == true && upper == true && numeric == true && special == true){
+        var characters = "abcdefghijklmnopqrstuvwxyz234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-+<>"
+      }
     }
   })
 }
