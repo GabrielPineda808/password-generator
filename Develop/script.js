@@ -3,7 +3,6 @@ var generateBtn = document.querySelector("#generate");
 var password = "";
 
 function generatePassword(){
-  generateBtn.addEventListener("click", function(){
     var passwordLength = prompt("How many characters would you like your password to be? (8-128 characters");
     
     if (passwordLength < 8){
@@ -88,14 +87,12 @@ function generatePassword(){
       else{
         alert("You must at minimum choose one character attribute");
       }
-      return password;
+      writePassword();
     }
-  })
-}
+  }
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -103,4 +100,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
